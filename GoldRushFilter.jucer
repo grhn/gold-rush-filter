@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="DFtgbd" name="Gold Rush Filter" projectType="audioplug" version="1.0.0"
+              bundleIdentifier="com.yourcompany.Harmione" includeBinaryInAppConfig="1"
+              buildVST="1" buildVST3="1" buildAU="1" buildRTAS="0" buildAAX="0"
+              pluginName="Gold Rush Filter" pluginDesc="Analog modeling low-pass filter"
+              pluginManufacturer="Prime Blocks DSP" pluginManufacturerCode="PBLD"
+              pluginCode="Grfl" pluginChannelConfigs="{1, 1}, {2, 2}" pluginIsSynth="0"
+              pluginWantsMidiIn="1" pluginProducesMidiOut="0" pluginSilenceInIsSilenceOut="0"
+              pluginEditorRequiresKeys="0" pluginAUExportPrefix="GoldRushFilterAU"
+              pluginRTASCategory="" aaxIdentifier="com.yourcompany.GoldRushFilter"
+              pluginAAXCategory="AAX_ePlugInCategory_Dynamics" jucerVersion="3.2.0"
+              companyName="Prime Blocks DSP">
+  <MAINGROUP id="haPBsh" name="Gold Rush Filter">
+    <GROUP id="{26322E60-F2FD-17A1-BFBB-8F9743E1C606}" name="Source">
+      <GROUP id="{25227221-3AE4-547A-9C8C-84CC019FF900}" name="Fonts">
+        <FILE id="u6dsl4" name="EmbeddedFonts.cpp" compile="1" resource="0"
+              file="Source/Fonts/EmbeddedFonts.cpp"/>
+        <FILE id="Ip1VcS" name="EmbeddedFonts.h" compile="0" resource="0" file="Source/Fonts/EmbeddedFonts.h"/>
+        <FILE id="aO21GJ" name="goldRushFonts.cpp" compile="1" resource="0"
+              file="Source/Fonts/goldRushFonts.cpp"/>
+        <FILE id="MRdhBu" name="goldRushFonts.h" compile="0" resource="0" file="Source/Fonts/goldRushFonts.h"/>
+      </GROUP>
+      <GROUP id="{5F1E4527-49B4-44C9-B314-9EEE96A7E8F5}" name="Utility">
+        <FILE id="JVbn9c" name="Interpolator.cpp" compile="1" resource="0"
+              file="Source/Utility/Interpolator.cpp"/>
+        <FILE id="ehLkeE" name="Interpolator.h" compile="0" resource="0" file="Source/Utility/Interpolator.h"/>
+        <FILE id="BRUCOw" name="LinearInterpolator.cpp" compile="1" resource="0"
+              file="Source/Utility/LinearInterpolator.cpp"/>
+        <FILE id="GO6Cjy" name="LinearInterpolator.h" compile="0" resource="0"
+              file="Source/Utility/LinearInterpolator.h"/>
+      </GROUP>
+      <GROUP id="{EE343CAE-07E0-F621-CC99-1655085489C3}" name="Filters">
+        <FILE id="QvF7cn" name="AnalogFilter.cpp" compile="1" resource="0"
+              file="Source/Filters/AnalogFilter.cpp"/>
+        <FILE id="ZAE1Q4" name="AnalogFilter.h" compile="0" resource="0" file="Source/Filters/AnalogFilter.h"/>
+        <FILE id="otImlE" name="AnalogFilterTemplates.h" compile="0" resource="0"
+              file="Source/Filters/AnalogFilterTemplates.h"/>
+        <FILE id="cGqxd6" name="LowPassFilter.cpp" compile="1" resource="0"
+              file="Source/Filters/LowPassFilter.cpp"/>
+        <FILE id="buI7Mr" name="LowPassFilter.h" compile="0" resource="0" file="Source/Filters/LowPassFilter.h"/>
+        <FILE id="ztcAzK" name="ResonantLowPassFilter.cpp" compile="1" resource="0"
+              file="Source/Filters/ResonantLowPassFilter.cpp"/>
+        <FILE id="qM6lDd" name="ResonantLowPassFilter.h" compile="0" resource="0"
+              file="Source/Filters/ResonantLowPassFilter.h"/>
+      </GROUP>
+      <GROUP id="{C718153D-604B-D304-60B9-72A140AD246D}" name="GUI">
+        <FILE id="W8X4W0" name="CustomLookAndFeel.cpp" compile="1" resource="0"
+              file="Source/GUI/CustomLookAndFeel.cpp"/>
+        <FILE id="IvDZNE" name="CustomLookAndFeel.h" compile="0" resource="0"
+              file="Source/GUI/CustomLookAndFeel.h"/>
+        <FILE id="YTlf4U" name="ParameterController.cpp" compile="1" resource="0"
+              file="Source/GUI/ParameterController.cpp"/>
+        <FILE id="jnHnXM" name="ParameterController.h" compile="0" resource="0"
+              file="Source/GUI/ParameterController.h"/>
+        <FILE id="nz57gd" name="VintageToggleButton.cpp" compile="1" resource="0"
+              file="Source/GUI/VintageToggleButton.cpp"/>
+        <FILE id="ch8VhN" name="VintageToggleButton.h" compile="0" resource="0"
+              file="Source/GUI/VintageToggleButton.h"/>
+      </GROUP>
+      <FILE id="MJX1MN" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="gNB7ob" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="XtNtUn" name="FloatParameter.cpp" compile="1" resource="0"
+            file="Source/FloatParameter.cpp"/>
+      <FILE id="Z8cvKZ" name="FloatParameter.h" compile="0" resource="0"
+            file="Source/FloatParameter.h"/>
+      <FILE id="DhUA4Y" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="DdN2iX" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="10.10 SDK" osxCompatibility="10.7 SDK" osxArchitecture="default"
+                       isDebug="1" optimisation="3" targetName="GoldRushFilter" cppLanguageStandard="c++11"
+                       cppLibType="libc++"/>
+        <CONFIGURATION name="Release" osxSDK="10.10 SDK" osxCompatibility="10.7 SDK"
+                       osxArchitecture="64BitUniversal" isDebug="0" optimisation="3"
+                       targetName="GoldRush" cppLanguageStandard="c++11" cppLibType="libc++"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+</JUCERPROJECT>
