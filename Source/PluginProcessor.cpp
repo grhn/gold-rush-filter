@@ -5,7 +5,6 @@
 #include <algorithm>
 
 
-//==============================================================================
 GoldRushAudioProcessor::GoldRushAudioProcessor()
 {
     sampleRate = getSampleRate();
