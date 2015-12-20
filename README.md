@@ -17,8 +17,10 @@ Adjusts the amount of negative feedback in the filter circuit
 Toggles the filter steepness between two modes (24 dB / octave and 48 dB / octave or 4th order and 8th order RC-filters, respectively)
 
 ## Demo
-See it in action
 https://youtu.be/_BQMq17sSC0
+
+## Download latest build
+https://www.dropbox.com/sh/d54v1ff4kd3mcw8/AAD9nPzrm-A4OYFDO_CCU8k_a?dl=0
 
 ## Prototyping
 MATLAB prototype of the algorithm and some plots (amplitude and phase response) can be found from the Matlab/ folder.
