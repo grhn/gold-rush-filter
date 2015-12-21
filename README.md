@@ -1,5 +1,5 @@
 # Gold Rush Filter
-Smooth, fat and musical analog style filtering! Low-pass filter section from analog modeling real-time audio plug-in "Gold Rush", which will be a commercial release during spring 2016. Plug-in implements discrete time approximation of series connected RC-filters.
+Smooth, fat and musical analog style audio filtering! Low-pass filter section from analog modeling real-time audio plug-in "Gold Rush", which will be a commercial release during spring 2016. Plug-in implements discrete time approximation of series connected RC-filters.
 
 ## Dependencies
 + JUCE framework
