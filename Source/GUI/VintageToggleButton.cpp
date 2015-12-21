@@ -8,6 +8,16 @@
 
 #include "VintageToggleButton.h"
 
+VintageToggleButton::VintageToggleButton (Colour baseColour, Colour switchColour) : baseColour (baseColour), switchColour (switchColour)
+{
+}
+
+void VintageToggleButton::setLabel (String s)
+{
+    label = s;
+}
+
+
 void VintageToggleButton::paintButton (Graphics& g, bool isMouseOverButton, bool isButtonDown)
 {
     const float w = getWidth();

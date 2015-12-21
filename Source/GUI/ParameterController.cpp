@@ -8,3 +8,12 @@
 
 #include "ParameterController.h"
 
+void ParameterController::bindToParameter (AudioProcessorParameter* target)
+{
+    this->target = target;
+}
+
+AudioProcessorParameter* ParameterController::getTargetParameter()
+{
+    return target;
+}

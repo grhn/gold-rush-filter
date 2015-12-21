@@ -14,15 +14,9 @@
 class ParameterController : public Slider
 {
 public:
-    void bindToParameter (AudioProcessorParameter* target)
-    {
-        this->target = target;
-    }
+    void bindToParameter (AudioProcessorParameter* target);
     
-    AudioProcessorParameter* getTargetParameter()
-    {
-        return target;
-    }
+    AudioProcessorParameter* getTargetParameter();
     
 private:
     AudioProcessorParameter* target;

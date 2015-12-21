@@ -8,7 +8,6 @@
 
 #include "CustomLookAndFeel.h"
 
-// API DOC LookAndFeel Font
 CustomLookAndFeel::CustomLookAndFeel()
 {
     setColour (Label::textColourId , Colour (Colours::antiquewhite));
@@ -43,7 +42,7 @@ void CustomLookAndFeel::drawRotarySlider (Graphics& g, int x, int y, int width, 
     const float angle = rotaryStartAngle + sliderPos * (rotaryEndAngle - rotaryStartAngle);
     const float innerRadius = radius * 0.7f;
   
-    // draw base
+    // Draw base
     {
         g.setGradientFill(ColourGradient(Colours::black, centreX, centreY,
                                          fadeColour, centreX, centreY - radius * 1.5f,
@@ -52,11 +51,10 @@ void CustomLookAndFeel::drawRotarySlider (Graphics& g, int x, int y, int width, 
         Path p;
         p.addEllipse(centreX - radius, centreY - radius, rw, rw);
         
-        // p.addEllipse(centreX - rw, centreY - rw, rw * 2.0, rw * 2.0);
         g.fillPath (p);
     }
     
-    // draw "chicken head"
+    // Draw "chicken head"
     {
         g.setGradientFill(ColourGradient(slider.findColour (Slider::rotarySliderFillColourId),
                                          centreX, centreY,
@@ -64,26 +62,22 @@ void CustomLookAndFeel::drawRotarySlider (Graphics& g, int x, int y, int width, 
                                          false));
 
         Path p;
-        
         p.startNewSubPath(-innerRadius * 0.7f, rw * 0.8f);
         p.quadraticTo(-rw * 0.2f, -rw, 0.0f, -rw);
         p.quadraticTo(rw * 0.2f , -rw, innerRadius * 0.7f, rw * 0.8f);
         p.closeSubPath();
-        
         p.addEllipse (-innerRadius, -innerRadius, innerRadius * 2.0f, innerRadius * 2.0f);
         
-        // p.addEllipse (-rw * 0.9, -rw * 0.9, 2.0 * (rw * 0.9), 2.0 * (rw * 0.9));
         g.fillPath (p, AffineTransform::rotation (angle).translated (centreX, centreY));
     }
     
-    // draw pointer line
+    // Draw pointer line
     {
         g.setColour(slider.findColour (Slider::rotarySliderOutlineColourId).withAlpha(0.7f));
 
         Path p;
         p.addLineSegment (Line<float> (0.0f, -radius * 0.5f, 0.0f, -rw), radius * 0.1f);
-        // float dotSize = 10.0;
-        // p. addEllipse (-dotSize / 2, -rw * 0.7 - dotSize / 2.0, dotSize, dotSize);
+
         g.fillPath (p, AffineTransform::rotation (angle).translated (centreX, centreY));
     }
 }

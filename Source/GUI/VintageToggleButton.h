@@ -15,16 +15,9 @@
 class VintageToggleButton : public ToggleButton
 {
 public:
-    VintageToggleButton (Colour baseColour = Colours::black, Colour switchColour = Colours::grey)
-        : baseColour (baseColour),
-          switchColour (switchColour)
-    {
-    }
+    VintageToggleButton (Colour baseColour = Colours::black, Colour switchColour = Colours::grey);
     
-    void setLabel (String s)
-    {
-        label = s;
-    }
+    void setLabel (String s);
     
     void paintButton (Graphics& g, bool isMouseOverButton, bool isButtonDown) override;
 
